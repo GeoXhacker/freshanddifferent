@@ -14,7 +14,7 @@ const MenClothing = () => {
         subCategories={input.subCategories}
         filters={input.filters}
         products={input.products} />
-      <Footer />
+        
     </div>
   )
 }

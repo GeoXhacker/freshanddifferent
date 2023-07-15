@@ -14,7 +14,7 @@ const NewArrivals = () => {
         subCategories={input.subCategories}
         filters={input.filters}
         products={input.products} />
-      <Footer />
+        
     </div>
   )
 }

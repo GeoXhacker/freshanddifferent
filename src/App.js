@@ -97,6 +97,7 @@ const App = () => {
           {/* Women Clothing */}
 
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

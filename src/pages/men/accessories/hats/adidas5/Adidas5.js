@@ -12,7 +12,7 @@
              
             <ProductOverview product={input.product} reviews={input.reviews}/>
             <ProductRecommendation recommendation={input.recommendation}/>
-            <Footer />
+              
             </div>
         )
     }
