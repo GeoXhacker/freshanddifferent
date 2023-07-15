@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import lunaLetter from "../../assets/logos/luna-letter.png";
+import freshndifferentlogo from "../../assets/logos/freshndifferent.jpg"
 
 import { ShoppingCart } from "../../components";
 import { Link } from "react-router-dom";
@@ -147,8 +148,8 @@ const navigation = {
 
   // Additional NavBar Pages
   pages: [
-    { name: "Company", href: "/error/" },
-    { name: "Stores", href: "/error/" },
+    { name: "About Us", href: "/error/" },
+    { name: "Contact Us", href: "/contact/" },
   ],
 };
 
@@ -434,8 +435,8 @@ const NavBar = () => {
               <motion.div className="ml-4 flex lg:ml-0" variants={textMotion}>
                 <Link to="/">
                   <img
-                    className="h-7 w-auto"
-                    src={lunaLetter}
+                    className="h-16 w-full"
+                    src={freshndifferentlogo}
                     alt="Luna Inc."
                   />
                 </Link>

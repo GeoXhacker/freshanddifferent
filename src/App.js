@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from "react-helmet"; //browser tab and icon customization
 
 // Core Function
-import { Home, Error, SignIn, NewArrivals } from './pages';
+import { Home, Error, SignIn, NewArrivals, ContactForm } from './pages';
 
 // Men Clothing
 import { Men, MenClothing, MenAccesories, MenBrands,
@@ -26,7 +26,7 @@ const App = () => {
         {/*Website TAB Description*/}
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Luna - Voyage On | Modern Collection for Men's & Women's Clothing</title>
+          <title>Fresh & Different</title>
           <link rel="canonical" href="https://www.google.com/" />
           <meta name="description" content="© 2023 Luna Inc. All Rights Reserved." />
         </Helmet>
@@ -36,9 +36,10 @@ const App = () => {
           <Route path="/error/" element={<Error />} />
           <Route path="/sign-in/" element={<SignIn />} />
           <Route path="/new-arrivals/" element={<NewArrivals />} />
+          {/* <Route path="/contact/" element={<ContactForm />} /> */}
 
           {/* Men Clothing */}
-          <Route path="/men/" element={<Men />} />
+          {/* <Route path="/men/" element={<Men />} />
           <Route path="/men/clothing/" element={<MenClothing />} />
           <Route path="/men/accessories/" element={<MenAccesories />} />
           <Route path="/men/brands/" element={<MenBrands />} />
@@ -89,7 +90,7 @@ const App = () => {
           <Route path="/men/accessories/hats/adidas2" element={<Adidas2 />} />
           <Route path="/men/accessories/hats/adidas3" element={<Adidas3 />} />
           <Route path="/men/accessories/hats/adidas4" element={<Adidas4 />} />
-          <Route path="/men/accessories/hats/adidas5" element={<Adidas5 />} />
+          <Route path="/men/accessories/hats/adidas5" element={<Adidas5 />} /> */}
 
           {/* Women Clothing */}
 

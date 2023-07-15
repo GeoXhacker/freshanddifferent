@@ -2,6 +2,7 @@
 export { default as Home } from './home/Home';
 export { default as SignIn } from './sign-in/SignIn';
 export { default as Error } from './error/Error';
+export {default as ContactForm} from "./contactUs/contact"
 
 // New Arrivals for All
 export { default as NewArrivals } from './new-arrivals/NewArrivals';

@@ -1,12 +1,14 @@
 import React from 'react'
 import logo from '../../assets/logos/logo.png';
+import freshndifferentlogo from "../../assets/logos/freshndifferent.jpg"
+
 
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer aria-label="Site Footer" class="bg-gray-300">
-      <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
+      <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8 ">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             {/* Company Logo */}
@@ -14,19 +16,19 @@ const Footer = () => {
               <img
                 class="h-24"
                 viewBox="0 0 118 24"
-                src={logo}
+                src={freshndifferentlogo}
                 alt="logo"
               />
             </Link>
 
             {/* Side Headings */}
             <p class="max-w-xs mt-4 text-gray-500">Established in 2023</p>
-            <p class="max-w-xs mt-2 text-gray-500">Based in California</p>
-            <a href='mailto:contact@luna.io
+            <p class="max-w-xs mt-2 text-gray-500">Based in Germany</p>
+            <a href='mailto:contact@freshanddifferent.com
                         ?subject=Luna%20Support:%20[INSERT%20Name]%20-%20[For%20Questions%20or%20Inquiries]%20
                         &body=Type%20Your%20Message%20Here'>
                 <p class="max-w-xs mt-2 text-gray-500 hover:underline hover:text-indigo-600">
-                  contact@luna.io
+                  contact@freshanddifferent.com
                 </p>
             </a>
 
@@ -133,7 +135,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4 col invisible md:visible">
             {/* COLUMN #1 -> Shop */}
             <div>
               <p class="font-medium text-gray-900">Shop</p>
@@ -181,7 +183,7 @@ const Footer = () => {
                 <ul class="space-y-4 text-sm">
                   <li>
                     <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      About Luna
+                      About
                     </Link>
                   </li>
 
@@ -270,7 +272,7 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <a href='mailto:contact@luna.io
+                    <a href='mailto:contact@freshanddifferent.com
                         ?subject=Luna%20Support:%20[INSERT%20Name]%20-%20[For%20Questions%20or%20Inquiries]%20
                         &body=Type%20Your%20Message%20Here'
                         class="text-gray-700 transition hover:text-indigo-600 hover:underline">
@@ -285,7 +287,7 @@ const Footer = () => {
         </div>
 
         {/* COPYRIGHT TEXT */}
-        <p class="flex justify-center items-center text-xs text-gray-500">&copy; 2023 Luna Inc. All Rights Reserved.</p>
+        <p class="flex justify-center items-center text-xs text-gray-500">&copy; 2023 Fresh & Different. All Rights Reserved.</p>
       </div>
     </footer>
   )
