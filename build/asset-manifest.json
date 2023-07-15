@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.5d7fb659.css",
+    "main.js": "./static/js/main.e44a1c16.js",
+    "static/media/armstrong.png": "./static/media/armstrong.47604bd49c7c78af6cbf.png",
+    "static/media/logo.png": "./static/media/logo.de4c42c9fa220fb32b83.png",
+    "static/media/pic1.jpeg": "./static/media/pic1.878968bc0d0846854a97.jpeg",
+    "static/media/freshndifferent.jpg": "./static/media/freshndifferent.bcea4b17d63ad9c29cdd.jpg",
+    "static/media/pic2.jpg": "./static/media/pic2.ccc7b3d485d95a6a9d40.jpg",
+    "static/media/pic3.jpg": "./static/media/pic3.26c8d59502cc7a14e715.jpg",
+    "static/media/luna-letter.png": "./static/media/luna-letter.4d2107375af4876f5869.png",
+    "index.html": "./index.html",
+    "main.5d7fb659.css.map": "./static/css/main.5d7fb659.css.map",
+    "main.e44a1c16.js.map": "./static/js/main.e44a1c16.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d7fb659.css",
+    "static/js/main.e44a1c16.js"
+  ]
+}
