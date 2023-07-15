@@ -8,7 +8,7 @@
     const Wallets = () => {
         return (
             <div className="bg-white">
-            <NavBar />
+             
             <ProductCategory
                 name={input.name}
                 sortOptions={input.sortOptions}

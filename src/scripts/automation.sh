@@ -39,7 +39,7 @@ category()
     const $name = () => {
         return (
             <div className=\"bg-white\">
-            <NavBar />
+             
             <ProductCategory
                 name={input.name}
                 sortOptions={input.sortOptions}
@@ -200,7 +200,7 @@ listing()
     const $name = () => {
         return (
             <div className='bg-white'>
-            <NavBar />
+             
             <ProductOverview product={input.product} reviews={input.reviews}/>
             <ProductRecommendation recommendation={input.recommendation}/>
             <Footer />

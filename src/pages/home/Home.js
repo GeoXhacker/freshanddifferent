@@ -10,7 +10,7 @@ const Home = () => {
     <div className='landing-page'>
         {/*Universal skeleton layout for the entire webpage*/}
         {/* <Banner trigger={toggleBanner} setTrigger={setToggleBanner}/> */}
-        <NavBar />
+         
         <Carousel/>
         <Header />
         <Previews />

@@ -25,7 +25,7 @@ return (
     variants={containerMotion}
     >
     {/* NAVIGATION BAR */}
-    <NavBar />
+     
 
     <main className="py-60 sm:py-56">
         <div className='text-center'>

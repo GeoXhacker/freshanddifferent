@@ -9,7 +9,7 @@
     const TommyJohn4 = () => {
         return (
             <div className='bg-white'>
-            <NavBar />
+             
             <ProductOverview product={input.product} reviews={input.reviews}/>
             <ProductRecommendation recommendation={input.recommendation}/>
             <Footer />

@@ -57,7 +57,7 @@ const MenClothing = () => {
   return (
     <div className="bg-white">
       {/* NAVIGATION BAR */}
-      <NavBar />
+       
 
       {/* HEADER SECION */}
       <div className="bg-cover bg-center bg-no-repeat bg-[url('https://img.freepik.com/free-photo/handsome-man-posing_144627-43637.jpg?w=1380&t=st=1686257680~exp=1686258280~hmac=726afead24dfc4f4278dba721ae69035073c374f588b3d9c614e3c197bbb5bfe')]">

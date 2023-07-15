@@ -16,6 +16,7 @@ import { Nike1, Nike2, Nike3, Nike4, Nike5,
          NorthFace1, NorthFace2, NorthFace3, NorthFace4, NorthFace5,
          GymShark1, GymShark2, GymShark3, GymShark4, GymShark5,
          Adidas1, Adidas2, Adidas3, Adidas4, Adidas5, } from './pages';
+import { NavBar } from './components';
 
 // Women Clothing
 
@@ -30,16 +31,17 @@ const App = () => {
           <link rel="canonical" href="https://www.google.com/" />
           <meta name="description" content="© 2023 Luna Inc. All Rights Reserved." />
         </Helmet>
+        <NavBar/>
 
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/error/" element={<Error />} />
           <Route path="/sign-in/" element={<SignIn />} />
           <Route path="/new-arrivals/" element={<NewArrivals />} />
-          {/* <Route path="/contact/" element={<ContactForm />} /> */}
+          <Route path="/contact/" element={<ContactForm />} />
 
           {/* Men Clothing */}
-          {/* <Route path="/men/" element={<Men />} />
+          <Route path="/men/" element={<Men />} />
           <Route path="/men/clothing/" element={<MenClothing />} />
           <Route path="/men/accessories/" element={<MenAccesories />} />
           <Route path="/men/brands/" element={<MenBrands />} />
@@ -90,7 +92,7 @@ const App = () => {
           <Route path="/men/accessories/hats/adidas2" element={<Adidas2 />} />
           <Route path="/men/accessories/hats/adidas3" element={<Adidas3 />} />
           <Route path="/men/accessories/hats/adidas4" element={<Adidas4 />} />
-          <Route path="/men/accessories/hats/adidas5" element={<Adidas5 />} /> */}
+          <Route path="/men/accessories/hats/adidas5" element={<Adidas5 />} />
 
           {/* Women Clothing */}
 

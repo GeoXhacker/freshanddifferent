@@ -7,7 +7,7 @@ import input from './input';
 const MenClothing = () => {
   return (
     <div className="bg-white">
-      <NavBar />
+       
       <ProductCategory
         name={input.name}
         sortOptions={input.sortOptions}
