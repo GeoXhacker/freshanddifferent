@@ -26,7 +26,7 @@ const SignIn = () => {
         {/* LOGO + Title */}
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <motion.span variants={textMotion}>
-            <Link to="/luna-demo/">
+            <Link to="/">
               <img
                 className="mx-auto h-12 w-auto"
                 src={lunaLetter}
@@ -73,7 +73,7 @@ const SignIn = () => {
 
                 {/* Forgot Password Link */}
                 <div className="text-sm">
-                  <Link to="/luna-demo/error/" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                  <Link to="/error/" className="font-semibold text-indigo-600 hover:text-indigo-500">
                     Forgot Password?
                   </Link>
                 </div>

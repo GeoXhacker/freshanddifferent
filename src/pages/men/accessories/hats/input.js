@@ -17,11 +17,11 @@
     
         // Category Filter
         subCategories: [
-            { name: 'Sunglasses', href:'/luna-demo/men/accessories/sunglasses'},
-            { name: 'Belts', href: '/luna-demo/men/accessories/belts' },
-            { name: 'Wallets', href: '/luna-demo/men/accessories/wallets' },
-            { name: 'Bags & Backpacks', href: '/luna-demo/men/accessories/bagsbackpacks' },
-            { name: 'Browse All', href: '/luna-demo/men/accessories/' },
+            { name: 'Sunglasses', href:'/men/accessories/sunglasses'},
+            { name: 'Belts', href: '/men/accessories/belts' },
+            { name: 'Wallets', href: '/men/accessories/wallets' },
+            { name: 'Bags & Backpacks', href: '/men/accessories/bagsbackpacks' },
+            { name: 'Browse All', href: '/men/accessories/' },
         ],
     
         // Specific Category Filters

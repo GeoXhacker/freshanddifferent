@@ -17,9 +17,9 @@
         
         // Product Breadcrumbs
         breadcrumbs: [
-            { id: 1, name: 'Men', to: '/luna-demo/men' },
-            { id: 2, name: 'Clothing', to:'/luna-demo/men/clothing'},
-            { id: 3, name: 'Activewear', to: '/luna-demo/men/clothing/activewear' },
+            { id: 1, name: 'Men', to: '/men' },
+            { id: 2, name: 'Clothing', to:'/men/clothing'},
+            { id: 3, name: 'Activewear', to: '/men/clothing/activewear' },
         ],
 
         //Product Images
@@ -85,7 +85,7 @@
             id: 1,
             name: 'Basic Tee',
             category: "Men's T-Shirts",
-            href: '/luna-demo/error',
+            href: '/error',
             imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
             imageAlt: "Front of men's Basic Tee in black.",
             price: '$35',
@@ -95,7 +95,7 @@
             id: 2,
             name: 'Basic Tee',
             category: "Men's T-Shirts",
-            href: '/luna-demo/error',
+            href: '/error',
             imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
             imageAlt: "Front of men's Basic Tee in black.",
             price: '$35',
@@ -105,7 +105,7 @@
             id: 3,
             name: 'Basic Tee',
             category: "Men's T-Shirts",
-            href: '/luna-demo/error',
+            href: '/error',
             imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
             imageAlt: "Front of men's Basic Tee in black.",
             price: '$35',
@@ -115,7 +115,7 @@
             id: 4,
             name: 'Basic Tee',
             category: "Men's T-Shirts",
-            href: '/luna-demo/error',
+            href: '/error',
             imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
             imageAlt: "Front of men's Basic Tee in black.",
             price: '$35',

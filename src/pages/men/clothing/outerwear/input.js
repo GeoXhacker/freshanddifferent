@@ -17,11 +17,11 @@
     
         // Category Filter
         subCategories: [
-            { name: 'Tops', href:'/luna-demo/men/clothing/tops'},
-            { name: 'Bottoms', href: '/luna-demo/men/clothing/bottoms' },
-            { name: 'Innerwear', href: '/luna-demo/men/clothing/innerwear' },
-            { name: 'Activewear', href: '/luna-demo/men/clothing/activewear' },
-            { name: 'Browse All', href: '/luna-demo/men/clothing/' },
+            { name: 'Tops', href:'/men/clothing/tops'},
+            { name: 'Bottoms', href: '/men/clothing/bottoms' },
+            { name: 'Innerwear', href: '/men/clothing/innerwear' },
+            { name: 'Activewear', href: '/men/clothing/activewear' },
+            { name: 'Browse All', href: '/men/clothing/' },
         ],
     
         // Specific Category Filters
