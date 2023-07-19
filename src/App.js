@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from "react-helmet"; //browser tab and icon customization
 
 // Core Function
-import { Home, Error, SignIn, NewArrivals, ContactForm } from './pages';
+import { Home, Error, SignIn, NewArrivals, ContactForm, About } from './pages';
 
 // Men Clothing
 import { Men, MenClothing, MenAccesories, MenBrands,
@@ -16,7 +16,8 @@ import { Nike1, Nike2, Nike3, Nike4, Nike5,
          NorthFace1, NorthFace2, NorthFace3, NorthFace4, NorthFace5,
          GymShark1, GymShark2, GymShark3, GymShark4, GymShark5,
          Adidas1, Adidas2, Adidas3, Adidas4, Adidas5, } from './pages';
-import { NavBar } from './components';
+import { NavBar, Footer } from './components';
+
 
 // Women Clothing
 
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/sign-in/" element={<SignIn />} />
           <Route path="/new-arrivals/" element={<NewArrivals />} />
           <Route path="/contact/" element={<ContactForm />} />
+          <Route path="/about/" element={<About />} />  
 
           {/* Men Clothing */}
           <Route path="/men/" element={<Men />} />

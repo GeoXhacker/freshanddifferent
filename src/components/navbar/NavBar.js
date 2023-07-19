@@ -148,7 +148,7 @@ const navigation = {
 
   // Additional NavBar Pages
   pages: [
-    { name: "About Us", href: "/error/" },
+    { name: "About Us", href: "/about/" },
     { name: "Contact Us", href: "/contact/" },
   ],
 };
