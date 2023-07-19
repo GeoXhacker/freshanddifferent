@@ -201,7 +201,7 @@ const NavBar = () => {
     <div className="bg-white">
       {/* MOBILE MENU */}
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-100 lg:hidden" onClose={setOpen}>
+        <Dialog as="div" className="relative z-50 lg:hidden" onClose={setOpen}>
           {/* Fade-In Animation -> Main Screen */}
           <Transition.Child
             as={Fragment}

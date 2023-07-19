@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../assets/logos/logo.png';
 import freshndifferentlogo from "../../assets/logos/freshndifferent.jpg"
-
+import { isMobile } from 'react-device-detect';
 
 import { Link } from 'react-router-dom';
 
@@ -135,155 +135,158 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4 col invisible md:visible">
-            {/* COLUMN #1 -> Shop */}
-            <div>
-              <p class="font-medium text-gray-900">Shop</p>
+         {
+          isMobile ? (<></>) : (<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4 col invisible md:visible">
+          {/* COLUMN #1 -> Shop */}
+          <div>
+            <p class="font-medium text-gray-900">Shop</p>
 
-              <nav aria-label="Footer Navigation - Services" class="mt-6">
-                <ul class="space-y-4 text-sm">
-                  <li>
-                    <Link to="/women/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Women
-                    </Link>
-                  </li>
+            <nav aria-label="Footer Navigation - Services" class="mt-6">
+              <ul class="space-y-4 text-sm">
+                <li>
+                  <Link to="/women/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Women
+                  </Link>
+                </li>
 
-                  <li>
-                    <Link to="/men/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Men
-                    </Link>
-                  </li>
+                <li>
+                  <Link to="/men/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Men
+                  </Link>
+                </li>
 
-                  <li>
-                    <Link to="/new-arrivals/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      New Arrivals
-                    </Link>
-                  </li>
+                <li>
+                  <Link to="/new-arrivals/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    New Arrivals
+                  </Link>
+                </li>
 
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Accessories
-                    </Link>
-                  </li>
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Accessories
+                  </Link>
+                </li>
 
-                  <li>
-                    <a href="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Brands
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            {/* COLUMN #2 -> Company */}
-            <div>
-              <p class="font-medium text-gray-900">Company</p>
-
-              <nav aria-label="Footer Navigation - Company" class="mt-6">
-                <ul class="space-y-4 text-sm">
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      About
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Careers
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Investors
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Sustainability
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            
-            {/* COLUMN #3 -> Help */}
-            <div>
-              <p class="font-medium text-gray-900">Help</p>
-
-              <nav aria-label="Footer Navigation - Company" class="mt-6">
-                <ul class="space-y-4 text-sm">
-                  <li>
-                    <Link to="/sign-in/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      My Account
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Find a Store
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/"class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Order Status
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Refund & Exchange
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Shipping & Deliveries
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            {/* COLUMN #4 -> */}
-            <div>
-              <p class="font-medium text-gray-900">Legal</p>
-
-              <nav aria-label="Footer Navigation - Legal" class="mt-6">
-                <ul class="space-y-4 text-sm">
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Privacy Policy
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Terms & Conditions
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Accessibility
-                    </Link>
-                  </li>
-
-                  <li>
-                    <a href='mailto:contact@freshanddifferent.com
-                        ?subject=Luna%20Support:%20[INSERT%20Name]%20-%20[For%20Questions%20or%20Inquiries]%20
-                        &body=Type%20Your%20Message%20Here'
-                        class="text-gray-700 transition hover:text-indigo-600 hover:underline">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            
+                <li>
+                  <a href="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Brands
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
+
+          {/* COLUMN #2 -> Company */}
+          <div>
+            <p class="font-medium text-gray-900">Company</p>
+
+            <nav aria-label="Footer Navigation - Company" class="mt-6">
+              <ul class="space-y-4 text-sm">
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    About
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Careers
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Investors
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Sustainability
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          
+          {/* COLUMN #3 -> Help */}
+          <div>
+            <p class="font-medium text-gray-900">Help</p>
+
+            <nav aria-label="Footer Navigation - Company" class="mt-6">
+              <ul class="space-y-4 text-sm">
+                <li>
+                  <Link to="/sign-in/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    My Account
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Find a Store
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/"class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Order Status
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Refund & Exchange
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Shipping & Deliveries
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* COLUMN #4 -> */}
+          <div>
+            <p class="font-medium text-gray-900">Legal</p>
+
+            <nav aria-label="Footer Navigation - Legal" class="mt-6">
+              <ul class="space-y-4 text-sm">
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Privacy Policy
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Terms & Conditions
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/error/" class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Accessibility
+                  </Link>
+                </li>
+
+                <li>
+                  <a href='mailto:contact@freshanddifferent.com
+                      ?subject=Luna%20Support:%20[INSERT%20Name]%20-%20[For%20Questions%20or%20Inquiries]%20
+                      &body=Type%20Your%20Message%20Here'
+                      class="text-gray-700 transition hover:text-indigo-600 hover:underline">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          
+        </div>)
+         } 
+      
         </div>
 
         {/* COPYRIGHT TEXT */}

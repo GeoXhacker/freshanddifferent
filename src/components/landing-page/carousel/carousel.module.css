@@ -22,3 +22,6 @@
     height: fit-content;
     margin: auto;
 }
+.swiper{
+    z-index: -1;
+}
