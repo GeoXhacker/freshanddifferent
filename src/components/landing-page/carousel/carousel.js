@@ -5,6 +5,7 @@ import {
   Scrollbar,
   A11y,
   Autoplay,
+  EffectFade
 } from "swiper/modules";
 import { motion } from "framer-motion";
 // Import Swiper styles
@@ -53,12 +54,13 @@ export default function Carousel() {
       slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      modules={[Navigation, Pagination, Autoplay]}
+      modules={[Pagination, Autoplay, EffectFade]}
       pagination={{ clickable: true }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
+      effect="fade"
       loop
     >
       {/* <SwiperSlide>Slide 1</SwiperSlide> */}

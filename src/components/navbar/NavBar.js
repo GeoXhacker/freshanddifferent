@@ -12,6 +12,71 @@ import { motion } from "framer-motion";
 const navigation = {
   // Women & Men Sections
   categories: [
+    // MEN SECTION
+    {
+      id: "men",
+      name: "Men",
+      featured: [
+        {
+          name: "New Arrivals",
+          href: "/new-arrivals/",
+          imageSrc: "https://img.freepik.com/free-photo/handsome-man-autumn-setting_23-2149056580.jpg?w=740&t=st=1687738996~exp=1687739596~hmac=dfc9d6070d96915d23039569bd9e2e9d717e1ff6f9236f7dcf94307a630450af",
+          imageAlt: "new arrivals - men",
+        },
+        {
+          name: "Featured",
+          href: "/men/",
+          imageSrc: "https://img.freepik.com/premium-photo/shirt-mockup-concept-with-plain-clothing_23-2149448789.jpg?w=740",
+          imageAlt: "mens collection",
+        },
+      ],
+    
+      sections: [
+        // Men's Clothing
+        {
+          id: "clothing",
+          name: "Clothing",
+          href: "/men/clothing/",
+          items: [
+            { name: "Tops", href: "/men/clothing/tops/" },
+            { name: "Bottoms", href: "/men/clothing/bottoms/" },
+            { name: "Innerwear", href: "/men/clothing/innerwear/" },
+            { name: "Outerwear", href: "/men/clothing/outerwear/" },
+            { name: "Activewear", href: "/men/clothing/activewear/" },
+            { name: "Browse All", href: "/men/clothing/" },
+          ],
+        },
+    
+        // Men's Accessories
+        {
+          id: "accessories",
+          name: "Accessories",
+          href: "/men/accessories/",
+          items: [
+            { name: "Hats", href: "/men/accessories/hats/" },
+            { name: "Sunglasses", href: "/men/accessories/hats/sunglasses/" },
+            { name: "Belts", href: "/men/accessories/belts/" },
+            { name: "Wallets", href: "/men/accessories/wallets/" },
+            { name: "Bags & Backpacks", href: "/men/accessories/bagsbackpacks/" },
+            { name: "Browse All", href: "/men/accessories/" },
+          ],
+        },
+    
+        // Brand Collaborations
+        // {
+        //   id: "collaborations",
+        //   name: "Collaborations",
+        //   href: "/men/brands/",
+        //   items: [
+        //     { name: "Suspicious Antwerp", href: "https://www.suspiciousantwerp.com/" },
+        //     { name: "Vineyard Vines", href: "https://www.vineyardvines.com/" },
+        //     { name: "Nike", href: "https://www.patagonia.com/home/" },
+        //     { name: "Urban Outfitters", href: "/https://www.urbanoutfitters.com/" },
+        //     { name: "Browse All", href: "/men/brands/" },
+        //   ],
+        // },
+      ],
+    },
     // WOMEN SECTON
     {
       id: "women",
@@ -79,71 +144,6 @@ const navigation = {
       ],
     },
 
-    // MEN SECTION
-    {
-      id: "men",
-      name: "Men",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "/new-arrivals/",
-          imageSrc: "https://img.freepik.com/free-photo/handsome-man-autumn-setting_23-2149056580.jpg?w=740&t=st=1687738996~exp=1687739596~hmac=dfc9d6070d96915d23039569bd9e2e9d717e1ff6f9236f7dcf94307a630450af",
-          imageAlt: "new arrivals - men",
-        },
-        {
-          name: "Featured",
-          href: "/men/",
-          imageSrc: "https://img.freepik.com/premium-photo/shirt-mockup-concept-with-plain-clothing_23-2149448789.jpg?w=740",
-          imageAlt: "mens collection",
-        },
-      ],
-
-      sections: [
-        // Men's Clothing
-        {
-          id: "clothing",
-          name: "Clothing",
-          href: "/men/clothing/",
-          items: [
-            { name: "Tops", href: "/men/clothing/tops/" },
-            { name: "Bottoms", href: "/men/clothing/bottoms/" },
-            { name: "Innerwear", href: "/men/clothing/innerwear/" },
-            { name: "Outerwear", href: "/men/clothing/outerwear/" },
-            { name: "Activewear", href: "/men/clothing/activewear/" },
-            { name: "Browse All", href: "/men/clothing/" },
-          ],
-        },
-
-        // Men's Accessories
-        {
-          id: "accessories",
-          name: "Accessories",
-          href: "/men/accessories/",
-          items: [
-            { name: "Hats", href: "/men/accessories/hats/" },
-            { name: "Sunglasses", href: "/men/accessories/hats/sunglasses/" },
-            { name: "Belts", href: "/men/accessories/belts/" },
-            { name: "Wallets", href: "/men/accessories/wallets/" },
-            { name: "Bags & Backpacks", href: "/men/accessories/bagsbackpacks/" },
-            { name: "Browse All", href: "/men/accessories/" },
-          ],
-        },
-
-        // Brand Collaborations
-        {
-          id: "collaborations",
-          name: "Collaborations",
-          href: "/men/brands/",
-          items: [
-            { name: "Suspicious Antwerp", href: "https://www.suspiciousantwerp.com/" },
-            { name: "Vineyard Vines", href: "https://www.vineyardvines.com/" },
-            { name: "Nike", href: "https://www.patagonia.com/home/" },
-            { name: "Urban Outfitters", href: "/https://www.urbanoutfitters.com/" },
-            { name: "Browse All", href: "/men/brands/" },
-          ],
-        },
-      ],
-    },
   ],
 
   // Additional NavBar Pages
@@ -325,7 +325,7 @@ const NavBar = () => {
                               >
                                 {section.items.map((item) => (
                                     <li key={item.name} className="flow-root">
-                                      <Link to={item.href} className="-m-2 block p-2 text-gray-500 hover:text-indigo-600">
+                                      <Link to={item.href} onClick={()=>setOpen(false)} className="-m-2 block p-2 text-gray-500 hover:text-indigo-600">
                                         {item.name}
                                       </Link>
                                     </li>
@@ -361,7 +361,7 @@ const NavBar = () => {
                 </motion.div>
 
                 {/* Sign In + Create Account */}
-                <motion.div
+                {/* <motion.div
                   className="space-y-6 border-t border-gray-200 px-4 py-6"
                   initial="hidden"
                   whileInView="visible"
@@ -374,7 +374,7 @@ const NavBar = () => {
                   >
                     Sign In / Create Account
                   </Link>
-                </motion.div>
+                </motion.div> */}
 
                 {/* Currency Setting */}
                 <motion.div
@@ -386,7 +386,7 @@ const NavBar = () => {
                 >
                   {/* American Dollar -> Default Currencey */}
                   <Link
-                    to="/error/"
+                    
                     className="flex items-center text-gray-700 hover:text-gray-800"
                   >
                     <img
@@ -397,7 +397,7 @@ const NavBar = () => {
                       className="block h-auto w-5 flex-shrink-0"
                     />
                     <span className="ml-3 block text-sm font-medium hover:text-indigo-600 hover:font-semibold">
-                      USD
+                      EN
                     </span>
                   </Link>
                 </motion.div>
@@ -605,8 +605,8 @@ const NavBar = () => {
                 >
                   <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-3">
                     {/* Sign In Button */}
-                    <Link to="/sign-in/">
                       {/* HOME ICON*/}
+                    {/* <Link to="/sign-in/">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -621,18 +621,18 @@ const NavBar = () => {
                           d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
                         />
                       </svg>
-                    </Link>
+                    </Link> */}
 
                     {/* Separation Bar */}
                     <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
 
                     {/* Create Account Button */}
-                    <Link
+                    {/* <Link
                       to="/error/"
                       className="text-sm font-medium text-gray-800 hover:text-indigo-600"
                     >
                       Create Account
-                    </Link>
+                    </Link> */}
                   </div>
                 </motion.div>
 
@@ -642,7 +642,7 @@ const NavBar = () => {
                   variants={textMotion}
                 >
                   <Link
-                    to="/error/"
+                    // to="/error/"
                     className="flex items-center text-gray-800 hover:text-indigo-600"
                   >
                     {/* American Dollar -> Default Currencey */}
@@ -654,13 +654,13 @@ const NavBar = () => {
                       className="block h-auto w-5 flex-shrink-0"
                     />
                     <span className="ml-3 block text-sm font-medium hover:font-semibold">
-                      USD
+                      EN
                     </span>
                   </Link>
                 </motion.div>
 
                 {/* Search Icon */}
-                <motion.div className="flex lg:ml-6" variants={textMotion}>
+                {/* <motion.div className="flex lg:ml-6" variants={textMotion}>
                   <Link
                     to="/error/"
                     className="p-2 text-gray-400 hover:text-indigo-600"
@@ -670,7 +670,7 @@ const NavBar = () => {
                       aria-hidden="true"
                     />
                   </Link>
-                </motion.div>
+                </motion.div> */}
 
                 {/* Shopping Cart */}
                 <motion.div

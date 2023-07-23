@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar, ProductCategory, Footer } from '../../../../components';
+import { ProductCategory } from '../../../../components';
 
 // ONLY CHANGE INPUT.JS
 import input from './input';

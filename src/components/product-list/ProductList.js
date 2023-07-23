@@ -1,20 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 // Purpose = product listing in grid format
 const ProductList = ( {products} ) => {
-  // stagger motion animation
-  const containerMotion = {
-    visible: { transition: { staggerChildren: 0.1 } },
+ // stagger motion animation
+ const containerMotion = {
+   visible: { transition: { staggerChildren: 0.1 } },
   };
-
+  
   // animation parameters for TEXT
   const textMotion = {
     // movement = FADE-IN + UPWARDS movement
     hidden: { opacity: 0 }, // INITIAL STAGE
     visible: { opacity: 1, transition: { duration: 0.25, ease: 'easeInOut' }}, // ANIMATION STAGE
   };
+  
+  const ChangeImageOnHover = ({img1,img2}) => {
+    const [selectedImageIndex, setSelectedImageIndex] = useState(img1);
+    return ( <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg xl:aspect-h-8 xl:aspect-w-7 transition-transform duration-300 transform group-hover:scale-95 shadow-lg" variants={textMotion}>
+    <img
+    onMouseEnter={() => img2? setSelectedImageIndex(img2): setSelectedImageIndex(img1)} //switch image when hovering
+    onMouseLeave={() => setSelectedImageIndex(img1)}
+      src={selectedImageIndex}
+      // alt={product.imageAlt}
+      className="h-full w-full object-cover object-center group-hover:opacity-75"
+    />
+  </div> );
+  }
 
   return (
     <div className="bg-white">
@@ -30,13 +44,17 @@ const ProductList = ( {products} ) => {
             <motion.span variants={textMotion}>
               <Link key={product.id} to={product.href} className="group">
                 {/* Product Image */}
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg xl:aspect-h-8 xl:aspect-w-7 transition-transform duration-300 transform group-hover:scale-95 shadow-lg" variants={textMotion}>
+                {/* <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg xl:aspect-h-8 xl:aspect-w-7 transition-transform duration-300 transform group-hover:scale-95 shadow-lg" variants={textMotion}>
                   <img
+                  onMouseEnter={() => setSelectedImageIndex(product.imageSrc2)} //switch image when hovering
+                  onMouseLeave={() => setSelectedImageIndex(product.imageSrc)}
                     src={product.imageSrc}
                     alt={product.imageAlt}
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
                   />
-                </div>
+                </div> */}
+
+                <ChangeImageOnHover img1={product.imageSrc} img2={product.imageSrc2} />
 
                 {/* Product Name */}
                 <h2 className="mt-5 ml-1 text-md sm:text-lg text-gray-900">{product.name}</h2>

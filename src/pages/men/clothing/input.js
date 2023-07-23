@@ -72,6 +72,7 @@ const Input = {
         price: '$45',
         imageSrc: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8a439643-992e-4729-a170-b018a7e5c319/sportswear-premium-essentials-mens-t-shirt-mkhTvc.png',
         imageAlt: 'image 1',
+        imageSrc2: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/38c37f44-c667-4e47-8c96-b228bc9e8f67/sportswear-premium-essentials-mens-t-shirt-mkhTvc.png",
       },
       {
         id: 2,
