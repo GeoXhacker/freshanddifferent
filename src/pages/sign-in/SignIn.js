@@ -27,11 +27,11 @@ const SignIn = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <motion.span variants={textMotion}>
             <Link to="/">
-              <img
+              {/* <img
                 className="mx-auto h-12 w-auto"
                 src={lunaLetter}
                 alt="Company Logo"
-              />
+              /> */}
             </Link>
           </motion.span>
           <motion.h2 className="mt-8 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900" variants={textMotion}>

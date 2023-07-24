@@ -18,8 +18,8 @@ const navigation = {
       name: "Men",
       featured: [
         {
-          name: "New Arrivals",
-          href: "/new-arrivals/",
+          name: "MEN",
+          href: "/men/",
           imageSrc: "https://img.freepik.com/free-photo/handsome-man-autumn-setting_23-2149056580.jpg?w=740&t=st=1687738996~exp=1687739596~hmac=dfc9d6070d96915d23039569bd9e2e9d717e1ff6f9236f7dcf94307a630450af",
           imageAlt: "new arrivals - men",
         },
@@ -53,12 +53,12 @@ const navigation = {
           name: "Accessories",
           href: "/men/accessories/",
           items: [
-            { name: "Hats", href: "/men/accessories/hats/" },
-            { name: "Sunglasses", href: "/men/accessories/hats/sunglasses/" },
-            { name: "Belts", href: "/men/accessories/belts/" },
-            { name: "Wallets", href: "/men/accessories/wallets/" },
-            { name: "Bags & Backpacks", href: "/men/accessories/bagsbackpacks/" },
-            { name: "Browse All", href: "/men/accessories/" },
+            { name: "Hats", href: "#" },
+            { name: "Sunglasses", href: "#" },
+            { name: "Belts", href: "#" },
+            { name: "Wallets", href: "#" },
+            { name: "Bags & Backpacks", href: "#" },
+            { name: "Browse All", href: "/#" },
           ],
         },
     
@@ -501,7 +501,7 @@ const NavBar = () => {
                                           variants={menuMotion}
                                         >
                                           {/* Category Title */}
-                                          <Link to={section.href}>
+                                          <Link to={section.href} onClick={()=> setOpen(false)}>
                                             <p
                                               id={`${section.name}-heading`}
                                               className="font-medium text-gray-900"
@@ -554,6 +554,7 @@ const NavBar = () => {
                                           <Link
                                             to={item.href}
                                             className="mt-6 block font-medium text-gray-900 hover:text-indigo-600"
+                                            onClick={()=>setOpen(false)}
                                           >
                                             <span
                                               className="absolute inset-0 z-100"

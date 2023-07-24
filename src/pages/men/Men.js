@@ -27,6 +27,19 @@ const callouts = [
     },
   ]
 
+  const products =  [
+    { name: "Tops", href: "/men/clothing/tops/",  imageSrc: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/hfoqjmvml1z5itd4lzg5/sportswear-club-mens-t-shirt-ShrJfX.png',
+    imageAlt: 'image 2' },
+    { name: "Bottoms", href: "/men/clothing/bottoms/",  imageSrc: 'https://static.zara.net/photos///2023/V/0/2/p/3284/442/251/2/w/1126/3284442251_2_4_1.jpg?ts=1673601386509',
+    imageAlt: 'image 1', },
+    { name: "Innerwear", href: "/men/clothing/innerwear/",imageSrc: 'https://tjproduction.imgix.net/products/1000018_100001_Ecomm_Editorial_Front_M_I_SS_TNK_5.5.22_558.jpg?v=1659302209&w=1000',
+    imageAlt: 'image 3',},
+    { name: "Outerwear", href: "/men/clothing/outerwear/", imageSrc: 'https://images.thenorthface.com/is/image/TheNorthFace/NF0A5GD9_JK3_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0',
+    imageAlt: 'image 5', },
+    { name: "Activewear", href: "/men/clothing/activewear/", imageSrc: 'https://cdn.shopify.com/s/files/1/0156/6146/products/Sport1-4ZipWoodlandGreenA3A5T-EBR4-0509.50_9373747c-b932-4369-bbd0-c56a412d0e3a_1200x.jpg?v=1670268987',
+    imageAlt: 'image 5', }
+  ]
+
 const MenClothing = () => {
   // stagger motion animation
   const containerMotion = {
@@ -102,15 +115,15 @@ const MenClothing = () => {
 
           {/* REUSABLE TEMPlATE FORMAT */}
           <div className="mt-6 space-y-12 lg:grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-            {callouts.map((callout) => (
-              <div key={callout.name} className="group relative">
+            {products.map((product) => (
+              <div key={product.name} className="group relative">
                 
                 {/* Collection Image */}
                 <motion.div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 shadow-xl transition-transform duration-300 transform group-hover:scale-95 sm:h-64" variants={imageMotion}>
-                  <Link to={callout.urlTag}>
+                  <Link to={product.href}>
                     <img
-                      src={callout.imageSrc}
-                      alt={callout.imageAlt}
+                      src={product.imageSrc}
+                      alt={product.imageAlt}
                       className="h-full w-full object-cover object-center group-hover:opacity-80"
                     />
                   </Link>
@@ -119,16 +132,16 @@ const MenClothing = () => {
                 {/* TEXT SECTION */}
                 <motion.span variants={textMotion}>
                   {/* Collection Title */}
-                  <h3 className="mt-6 text-1xl font-none text-indigo-600">
-                    <a href={callout.href}>
-                      {callout.name}
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-500 to-purple-500 mr-1.5">
+                    <a href={product.href}>
+                      {product.name} 
                     </a>
                   </h3>
 
                   {/* Collection Description */}
-                  <p className="text-base font-semibold text-gray-900">
-                    {callout.description}
-                  </p>
+                  {/* <p className="text-base font-semibold text-gray-900">
+                    {product.name}
+                  </p> */}
                 </motion.span>
 
               </div>
@@ -137,9 +150,6 @@ const MenClothing = () => {
 
         </motion.div>
       </div>
-
-      {/* NAVIGATION BAR */}
-      <Footer/>
     </div>
   )
 }
